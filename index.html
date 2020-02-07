@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Teste</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+    <style>
+        .ct-bar {
+            stroke-width: 27px!important;
+        }
+
+        .card .ct-label {
+            font-size: 0.7em!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-image="assets/img/sidebar-5.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="javascript:;" class="simple-text">
+                        <h1>Teste</h1>
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">
+                            <i class="nc-icon nc-icon nc-chart"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="devedores.html">
+                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                            <p>Devedores</p>
+                        </a>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Analytics </a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
+                        
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="d-lg-block"> Total de pesquisas: <?php echo $pes[0][0];?></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="controller/logout.php">
+                                    <span class="no-icon">Sair</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Liamar Fernandes</h4>
+                                        <p class="card-category">Empoderamento feminino</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartLiamar" class="chartLiamar ct-perfect-fourth"></div>
+                                            
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+                                            <a class="pull-right" href="pq/liamarPq.php">Detalhes</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Alessandro Gomes</h4>
+                                        <p class="card-category">A arte de viver uma vida incrível</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartALe" class="chartAle ct-perfect-fourth"></div>
+
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Alessandro Gomes</h4>
+                                        <p class="card-category">Inovação</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartAleInova" class="chartAleInova ct-perfect-fourth"></div>
+
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Nanci Eckermann</h4>
+                                        <p class="card-category">Você é mais a Bela ou a Fera?</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartNanci" class="chartNanci ct-perfect-fourth"></div>
+
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+                                            <a class="pull-right" href="pq/nanciPq.php">Detalhes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title"> Edinea Tomaz e Thalia Tomaz</h4>
+                                        <p class="card-category">Palavra final</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartThalia" class="chartThalia ct-perfect-fourth"></div>
+
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h4 class="card-title"> Nível de Satisfação</h4>
+                                            <p class="card-category"> Qual o seu nível de satisfação com o evento?</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chartSatisfacao" class="chartSatisfacao ct-perfect-fourth"></div>
+                                                
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> 20/10/2019
+                                               
+                                            </div>
+                                        </div>
+                                 </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h4 class="card-title">Conteúdo do Evento</h4>
+                                            <p class="card-category">&nbsp;</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chartConteudo" class="chartConteudo ct-perfect-fourth"></div>
+                                                
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> 20/10/2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h4 class="card-title">Conteúdo da Palestra</h4>
+                                            <p class="card-category">&nbsp;</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chartPalestra" class="chartPalestra ct-perfect-fourth"></div>
+
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> 20/10/2019
+                                                <a class="pull-right" href="pq/conteudoPq.php">Detalhes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="card ">
+                                            <div class="card-header ">
+                                                <h4 class="card-title"> Staffs </h4>
+                                                <p class="card-category">Nota 1 a 5</p>
+                                            </div>
+                                            <div class="card-body ">
+                                                <div id="chartStaffs" class="chartStaffs ct-perfect-fourth"></div>
+                                                    
+                                                <hr>
+                                                <div class="stats">
+                                                    <i class="fa fa-clock-o"></i> 20/10/2019
+                                                   
+                                                </div>
+                                            </div>
+                                     </div>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="card ">
+                                            <div class="card-header ">
+                                                <h4 class="card-title"> Limpeza  </h4>
+                                                <p class="card-category">&nbsp;</p>
+                                            </div>
+                                            <div class="card-body ">
+                                                <div id="chartLimpeza" class="chartLimpeza ct-perfect-fourth"></div>
+                                                    
+                                                <hr>
+                                                <div class="stats">
+                                                    <i class="fa fa-clock-o"></i> 20/10/2019
+                                                   
+                                                </div>
+                                            </div>
+                                     </div>
+                                </div>
+                            <div class="col-md-4">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Alimentação</h4>
+                                        <p class="card-category">&nbsp;</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartAlimentacao" class="chartAlimentacao ct-perfect-fourth"></div>
+
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title"> Convite  </h4>
+                                        <p class="card-category">&nbsp;</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartConvite" class="chartConvite ct-perfect-fourth"></div>
+
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> 20/10/2019
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h4 class="card-title"> Carga Horaria</h4>
+                                            <p class="card-category"></p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chartComunicacao" class="chartCarga ct-perfect-fourth"></div>
+
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> 20/10/2019
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h4 class="card-title"> Aprimoramento Pessoal e Profissional</h4>
+                                            <p class="card-category"></p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chartAprimoramento" class="chartAprimoramento ct-perfect-fourth"></div>
+
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> 20/10/2019
+                                                <a class="pull-right" href="pq/aprimoramentoPq.php">Detalhes</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="col-md-4">
+                                            <div class="card ">
+                                                <div class="card-header ">
+                                                    <h4 class="card-title"> Comunicação</h4>
+                                                    <p class="card-category"></p>
+                                                </div>
+                                                <div class="card-body ">
+                                                    <div id="chartComunicacao" class="chartComunicacao ct-perfect-fourth"></div>
+                                                        
+                                                    <hr>
+                                                    <div class="stats">
+                                                        <i class="fa fa-clock-o"></i> 20/10/2019
+                                                       
+                                                    </div>
+                                                </div>
+                                         </div>
+                                    </div>
+
+                                <div class="col-md-4">
+                                    <div class="card ">
+                                        <div class="card-header ">
+                                            <h4 class="card-title"> Recomendar</h4>
+                                            <p class="card-category">Nota 1 a 5</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chartConvidaAmigo" class="chartConvidaAmigo ct-perfect-fourth"></div>
+
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="fa fa-clock-o"></i> 20/10/2019
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            <a href="http://www.creative-tim.com">Treepart</a>
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<!--  Chartist Plugin  -->
+<script src="assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+<script type="text/javascript">
+         /*var data = {
+           series: [5, 3, 4, 9]
+         };
+         var sum = function(a, b) { return a + b };
+         new Chartist.Pie('.chartPaletrante', data, {
+           labelInterpolationFnc: function(value) {
+             return Math.round(value / data.series.reduce(sum) * 100) + '%';
+           }
+         });*/
+
+         $(document).ready(function(){
+
+             $.ajax("controller/palestrante2.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[],
+                         labels:[]
+
+                     };
+                     let    = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         data.labels.push(val.alessandro);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+
+                     new Chartist.Bar('.chartAle', data, {
+                         distributeSeries: true
+                     });
+
+                 }
+
+             });
+
+             $.ajax("controller/palestrante1.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[],
+                         labels:[]
+
+                     };
+                     let    = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         data.labels.push(val.liamar);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+
+                     new Chartist.Bar('.chartLiamar', data, {
+                         distributeSeries: true
+                     });
+
+                 }
+
+             });
+
+             $.ajax("controller/inovacao.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[],
+                         labels:[]
+
+                     };
+                     let    = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         data.labels.push(val.inovacao);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+
+                     new Chartist.Bar('.chartAleInova', data, {
+                         distributeSeries: true
+                     });
+
+                 }
+
+             });
+
+             $.ajax("controller/palestrante3.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[],
+                         labels:[]
+
+                     };
+                     let    = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         data.labels.push(val.nanci);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+
+                     new Chartist.Bar('.chartNanci', data, {
+                         distributeSeries: true
+                     });
+
+                 }
+
+             });
+
+             $.ajax("controller/palestrante4.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[],
+                         labels:[]
+
+                     };
+                     let    = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         data.labels.push(val.thalia);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+
+                     new Chartist.Bar('.chartThalia', data, {
+                         distributeSeries: true
+                     });
+
+                 }
+
+             });
+           
+
+
+            $.ajax("controller/chart1.php", {
+                success:function(response) {
+                    let data ={
+                        series:[],
+                        labels:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        data.labels.push(val.satisfacao);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    new Chartist.Bar('.chartSatisfacao', data, {
+                      distributeSeries: true,
+                      horizontalBars: true,
+                      axisY: {
+                        offset: 75
+                      }
+
+                    });
+                                   
+
+                }
+                
+            });
+
+            $.ajax("controller/chart2.php", {
+                success:function(response) {
+                    let data ={
+                        series:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        labels.push(val.conteudo);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    var sum = function(a, b) { return a + b };
+                    new Chartist.Pie('.chartConteudo', data, {
+                      labelInterpolationFnc: function(value, idx) {
+                        var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                        return labels[idx] + ' - ' + percentage;
+                      }
+                    });                                
+
+                }
+                
+            });
+
+            $.ajax("controller/chart3.php", {
+                success:function(response) {
+                    let data ={
+                        series:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        labels.push(val.staffs);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    var sum = function(a, b) { return a + b };
+                    new Chartist.Pie('.chartStaffs', data, {
+                      labelInterpolationFnc: function(value, idx) {
+                        var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                        return 'nota '+labels[idx] + ' - ' + percentage;
+                      }
+                    });                                
+
+                }
+                
+            });
+
+            $.ajax("controller/chart4.php", {
+                success:function(response) {
+                    let data ={
+                        series:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        labels.push(val.limpeza);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    var sum = function(a, b) { return a + b };
+                    new Chartist.Pie('.chartLimpeza', data, {
+                      labelInterpolationFnc: function(value, idx) {
+                        var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                        return labels[idx] + ' - ' + percentage;
+                      }
+                    });                                
+
+                }
+                
+            });
+
+            $.ajax("controller/chart5.php", {
+                success:function(response) {
+                    let data ={
+                        series:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        labels.push(val.alimento);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    var sum = function(a, b) { return a + b };
+                    new Chartist.Pie('.chartAlimentacao', data, {
+                        donut: true,
+                        donutWidth: 60,
+                        startAngle: 270,
+                      labelInterpolationFnc: function(value, idx) {
+                        var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                        return labels[idx] + ' - ' + percentage;
+                      }
+                    });                                
+
+                }
+                
+            });
+
+            $.ajax("controller/chart6.php", {
+                success:function(response) {
+                    let data ={
+                        series:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        labels.push(val.convite);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    var sum = function(a, b) { return a + b };
+                    new Chartist.Pie('.chartConvite', data, {
+                        donut: true,
+                        donutWidth: 60,
+                        startAngle: 270,  
+                      labelInterpolationFnc: function(value, idx) {
+                        var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                        return labels[idx] + ' - ' + percentage;
+                      }
+                    });                                
+
+                }
+                
+            });
+
+            $.ajax("controller/chart7.php", {
+                success:function(response) {
+                    let data ={
+                        series:[]                      
+                    };
+                    let labels = [];
+                    $.each(JSON.parse(response), function (key, val) {
+                        labels.push(val.recomendar);
+                        data.series.push(parseInt(val.cont));
+                    });
+
+                    var sum = function(a, b) { return a + b };
+                    new Chartist.Pie('.chartConvidaAmigo', data, {
+                        donut: true,
+                        donutWidth: 60,
+                        startAngle: 270,
+                        labelInterpolationFnc: function(value, idx) {
+                          var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                          return 'Nota '+labels[idx] + ' - ' + percentage;
+                        }
+                    });                                
+
+                }
+                
+            });
+
+
+             $.ajax("controller/comunicacao.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[]
+                     };
+                     let labels = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         labels.push(val.comunicacao_evento);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+                     var sum = function(a, b) { return a + b };
+                     new Chartist.Pie('.chartComunicacao', data, {
+                         donut: true,
+                         donutWidth: 60,
+                         startAngle: 270,
+                         labelInterpolationFnc: function(value, idx) {
+                             var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                             return labels[idx] + ' - ' + percentage;
+                         }
+                     });
+
+                 }
+
+             });
+
+
+             $.ajax("controller/cargaHoraria.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[]
+                     };
+                     let labels = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         labels.push(val.carga);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+                     var sum = function(a, b) { return a + b };
+                     new Chartist.Pie('.chartCarga', data, {
+                         donut: true,
+                         donutWidth: 60,
+                         startAngle: 270,
+                         labelInterpolationFnc: function(value, idx) {
+                             var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                             return labels[idx] + ' - ' + percentage;
+                         }
+                     });
+
+                 }
+
+             });
+
+             $.ajax("controller/palestra.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[]
+                     };
+                     let labels = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         labels.push(val.conteudo_palestra);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+                     var sum = function(a, b) { return a + b };
+                     new Chartist.Pie('.chartPalestra', data, {
+
+                         labelInterpolationFnc: function(value, idx) {
+                             var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                             return labels[idx] + ' - ' + percentage;
+                         }
+                     });
+
+                 }
+
+             });
+
+             $.ajax("controller/aprimoramento.php", {
+                 success:function(response) {
+                     let data ={
+                         series:[]
+                     };
+                     let labels = [];
+                     $.each(JSON.parse(response), function (key, val) {
+                         labels.push(val.aprimoramento);
+                         data.series.push(parseInt(val.cont));
+                     });
+
+                     var sum = function(a, b) { return a + b };
+                     new Chartist.Pie('.chartAprimoramento', data, {
+
+                         labelInterpolationFnc: function(value, idx) {
+                             var percentage = Math.round(value / data.series.reduce(sum) * 100) + '%';
+                             return labels[idx] + ' - ' + percentage;
+                         }
+                     });
+
+                 }
+
+             });
+
+        });
+         
+
+
+</script>
+</html>
